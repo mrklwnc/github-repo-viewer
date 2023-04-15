@@ -9,6 +9,7 @@ interface Repo {
   stargazers_count: number;
   forks_count: number;
   watchers_count: number;
+  repos: [];
 }
 
 // Fetch Repositories from Github API
@@ -19,12 +20,13 @@ async function fetchRepos() {
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
   const repos = await res.json();
+
+  console.log(repos);
   return repos;
 }
 
 const ReposPage = async () => {
   const repos: Repo[] = await fetchRepos();
-
   return (
     <div className="container">
       <h2 className="text-xl">Repositories</h2>
@@ -50,6 +52,8 @@ const ReposPage = async () => {
             </Link>
           </li>
         ))}
+
+        {/* <RepoLists repoLists={repos} /> */}
       </ul>
     </div>
   );
