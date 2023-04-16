@@ -1,8 +1,10 @@
+import Courses from "./components/Courses";
+
 const HomePage = () => {
   return (
-    <div>
-      <h1>Welcome to Next.js 13</h1>
-    </div>
+    <>
+      <Courses />
+    </>
   );
 };
 

@@ -14,7 +14,11 @@ interface Repo {
 
 // Fetch Repositories from Github API
 async function fetchRepos() {
-  const res = await fetch(`https://api.github.com/users/bradtraversy/repos`);
+  const res = await fetch(`https://api.github.com/users/bradtraversy/repos`, {
+    next: {
+      revalidate: 60,
+    },
+  });
 
   // Loading... to wait 1 second
   await new Promise((resolve) => setTimeout(resolve, 1000));

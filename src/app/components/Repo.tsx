@@ -6,8 +6,6 @@ async function fetchRepo(name: string) {
 
   const repo = await res.json();
 
-  console.log(repo);
-
   return repo;
 }
 
@@ -16,7 +14,11 @@ const Repo = async ({ name }: any) => {
 
   return (
     <>
-      <h2>{repo.name}</h2>
+      <h1 className="text-3xl hover:underline">
+        <Link href={`https://github.com/bradtraversy/${repo.name}`}>
+          {repo.name}
+        </Link>
+      </h1>
       <p>{repo.description}</p>
       <div className="card-stats">
         <div className="card-stat">
