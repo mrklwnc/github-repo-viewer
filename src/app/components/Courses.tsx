@@ -59,6 +59,7 @@ interface Courses {
 //   );
 // }
 
+// * Client-side Rendering (CSR)
 const Courses = ({ courses }: any) => {
   return (
     <div className="courses">
