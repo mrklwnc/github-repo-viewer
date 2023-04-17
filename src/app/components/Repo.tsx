@@ -9,7 +9,7 @@ async function fetchRepo(name: string) {
   return repo;
 }
 
-const Repo = async ({ name }: any) => {
+const Repo: any = async ({ name }: any) => {
   const repo = await fetchRepo(name);
 
   return (

@@ -16,7 +16,7 @@ async function fetchRepoContents(name: string) {
   return contents;
 }
 
-const RepoDirs = async ({ name }: any) => {
+const RepoDirs: any = async ({ name }: any) => {
   const contents = fetchRepoContents(name);
   const dirs = (await contents).filter(
     (content: { type: string }) => content.type === "dir"

@@ -21,8 +21,6 @@ export default function Page({ params: { name } }: any) {
   );
 }
 
-// Continue 37:17
-
 // This and the one at the top is the same
 // const RepoPage = ({ params: { name } }: any) => {
 //   return (
